@@ -288,8 +288,8 @@ function getFloatplaneContentData() {
         throw new ScriptException("Failed request [" + API.HOME.CREATOR_LIST + query + "] (" + home.code + ")");
     }
     throw new ScriptError(home.body);
-    // const homeResp = JSON.parse(home.body);
-    // return homeResp;
+    const homeResp = JSON.parse(home.body);
+    return homeResp;
 }
 function getQueryPager(query) {
     const initialResults = claimSearch(query);
